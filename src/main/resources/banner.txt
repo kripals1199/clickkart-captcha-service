@@ -1,0 +1,53 @@
+${AnsiColor.BRIGHT_BLUE}
+#############################################################################################
+#                                                                                           #
+#    ██████╗ █████╗ ██████╗ ████████╗ ██████╗██╗  ██╗ █████╗                              #
+#   ██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║  ██║██╔══██╗                              #
+#   ██║     ███████║██████╔╝   ██║   ██║     ███████║███████║                              #
+#   ██║     ██╔══██║██╔═══╝    ██║   ██║     ██╔══██║██╔══██║                              #
+#   ╚██████╗██║  ██║██║        ██║   ╚██████╗██║  ██║██║  ██║                              #
+#    ╚═════╝╚═╝  ╚═╝╚═╝        ╚═╝    ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝                              #
+#                                                                                           #
+#                                  🔒  CAPTCHA SERVICE  🔒                                  #
+#                                                                                           #
+#############################################################################################
+
+${AnsiColor.BRIGHT_GREEN}
+┌────────────────────────────── APPLICATION ─────────────────────────────────────────────────┐
+│ Name             : ${spring.application.name}                                              │
+│ Version          : ${application.version}                                                  │
+│ Environment      : ${spring.profiles.active}                                               │
+│ Server Port      : ${server.port}                                                          │
+│ Context Path     : ${server.servlet.context-path:/}                                        │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+${AnsiColor.BRIGHT_CYAN}
+┌────────────────────────────── PLATFORM ────────────────────────────────────────────────────┐
+│ Java Version     : ${java.version}                                                         │
+│ Spring Boot      : ${spring-boot.formatted-version}                                        │
+│ Operating System : ${os.name} ${os.version}                                                │
+│ User             : ${user.name}                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+${AnsiColor.BRIGHT_YELLOW}
+┌────────────────────────────── BUILD INFO ──────────────────────────────────────────────────┐
+│ Build Time       : ${build.time}                                                           │
+│ Git Branch       : ${git.branch}                                                           │
+│ Git Commit       : ${git.commit.id.abbrev}                                                 │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+${AnsiColor.BRIGHT_MAGENTA}
+┌────────────────────────────── FEATURES ────────────────────────────────────────────────────┐
+│ ✓ Self-Hosted Distorted-Text Image Challenges (no third-party provider)                    │
+│ ✓ One-Time-Use, Redis-Backed, Short-TTL Verification                                       │
+│ ✓ Per-IP Rate Limiting on Challenge Generation                                             │
+│ ✓ Answer Never Persisted in Plaintext (SHA-256 only)                                       │
+└────────────────────────────────────────────────────────────────────────────────────────────┘
+
+${AnsiColor.BRIGHT_WHITE}
+#############################################################################################
+#                    🚀 ClickKart Captcha Service Started Successfully 🚀                   #
+#                     Self-Hosted • Ephemeral • One-Time-Use • Rate-Limited                 #
+#############################################################################################
+
+${AnsiColor.DEFAULT}
