@@ -33,7 +33,12 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 class CaptchaImageGeneratorImpl implements CaptchaImageGenerator {
 
-    private static final String ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    // Excludes every visually ambiguous character: 0/O, and 1/I/L. 'L' was previously still
+    // present here despite this class's own Javadoc, the README, and the unit test all stating it
+    // was excluded - which made the test fail whenever a generated code happened to contain an L
+    // (1 - (31/32)^6, roughly one run in six). Removing it makes the alphabet match its stated
+    // contract and the test deterministic, rather than weakening the assertion to match the bug.
+    private static final String ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
     private static final String[] FONT_NAMES = {Font.SERIF, Font.SANS_SERIF, Font.MONOSPACED};
     private static final SecureRandom RANDOM = new SecureRandom();
 

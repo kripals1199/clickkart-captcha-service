@@ -10,7 +10,8 @@ import org.junit.jupiter.api.Test;
 
 class CaptchaImageGeneratorImplTest {
 
-    private static final String SAFE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    /** Must stay identical to CaptchaImageGeneratorImpl.ALPHABET - no 0/O, no 1/I/L. */
+    private static final String SAFE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 
     @Test
     void generatesTextOfConfiguredLengthFromSafeAlphabetAndAValidPngImage() throws Exception {
