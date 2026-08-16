@@ -4,7 +4,7 @@ package com.clickkart.captcha.exception;
 /**
  * Redis (challenge storage / rate-limit counters) could not be reached. Deliberately fails the
  * whole request rather than degrading silently - see {@code ChallengeRateLimitFilter} and {@code
- * CaptchaServiceImpl} for the call sites that throw this, and {@code CaptchaExceptionHandler}
+ * CaptchaServiceImpl} for the call sites that throw this, and {@code GlobalExceptionHandler}
  * for the resulting 503 response.
  */
 public class DownstreamServiceUnavailableException extends RuntimeException {

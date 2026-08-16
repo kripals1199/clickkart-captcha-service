@@ -1,4 +1,4 @@
-// src/main/java/com/clickkart/captcha/exception/CaptchaExceptionHandler.java
+// src/main/java/com/clickkart/captcha/exception/GlobalExceptionHandler.java
 package com.clickkart.captcha.exception;
 
 import com.clickkart.captcha.constant.MdcKeys;
@@ -24,7 +24,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
  */
 @Slf4j
 @RestControllerAdvice
-public class CaptchaExceptionHandler {
+public class GlobalExceptionHandler {
 
     private static final String DEFAULT_FIELD_ERROR_MESSAGE = "invalid value";
 
