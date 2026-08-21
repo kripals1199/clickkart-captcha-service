@@ -69,6 +69,7 @@ public class CaptchaServiceImpl implements CaptchaService {
         try {
             storedHash = redisTemplate.opsForValue().getAndDelete(key);
         } catch (DataAccessException e) {
+        	e.printStackTrace();
             log.warn("CAPTCHA_VERIFY_UNAVAILABLE challengeId={} cause={}", challengeId, e.toString());
             throw new DownstreamServiceUnavailableException("Captcha verification (Redis)", e);
         }

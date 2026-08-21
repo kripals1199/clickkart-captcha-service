@@ -24,4 +24,9 @@ public class CaptchaProperties {
      * address) - unset/empty means "trust nothing but the immediate socket address". See
      * clickkart-auth-service's identically-named property for the full rationale. */
     private List<String> trustedProxyCidrs = List.of();
+
+    /** Comma-separated origins allowed to call /challenge from a browser. Defense in depth - the
+     * Gateway has its own CORS config too; see CorsConfig for why both exist and how the duplicate
+     * headers that produces are collapsed. */
+    private String allowedOrigins = "http://localhost:4200";
 }
